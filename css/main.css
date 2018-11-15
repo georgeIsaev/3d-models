@@ -1,0 +1,15 @@
+.descript {
+	padding: 50px 0;
+	background-color: #e8dfd1;
+}
+
+.product-preview {
+	padding: 50px 0;
+	background-color: #e8d1e6;
+}
+
+.model-review .btn-group-vertical,
+.model-review .dropdown-menu {
+	width: 100%;
+}
+
