@@ -1,4 +1,5 @@
 .descript {
+	margin-top: -20px;
 	padding: 50px 0;
 	background-color: #e8dfd1;
 }
@@ -17,3 +18,18 @@ iframe {
 	margin-bottom: 10px;
 }
 
+footer {
+	padding: 80px 0;
+}
+
+footer .copyright {
+	font-size: 17px;
+	text-align: center;
+}
+
+.brackets,
+.rail,
+.plats,
+.corner {
+	list-style-type: none; 
+}
