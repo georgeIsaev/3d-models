@@ -10,6 +10,7 @@
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->  
     <!-- Предупреждение: Respond.js не работает при просмотре страницы через файл:// -->  
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="container">
             <!-- Кнопка меню на маленьких экранах -->
@@ -30,22 +31,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Logo</a>
+              <a class="navbar-brand" href="home.html">Logo</a>
             </div>
             <!-- /Кнопка меню на маленьких экранах -->
 
             <!-- Панель навигации -->  
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Главная <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Технологии</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Калькулятор</a></li>
-              </ul>
-            <!-- /Панель навигации -->  
-              
+                <li class="menu-titles"><a href="#">Главная</a></li>
+                <li class="menu-titles"><a href="#">Технологии</a></li>
+                <li class="menu-titles"><a href="#">Услуги</a></li>
+                <li class="menu-titles"><a href="#">Контакты</a></li>
+                <li class="menu-titles"><a href="#">Калькулятор</a></li>
+              </ul> 
             </div><!-- /.navbar-collapse -->
+            <!-- /Панель навигации -->
+             
           </div><!-- /.container -->
         </div><!-- /.container-fluid -->
       </nav>
@@ -54,9 +55,10 @@
       <section class="descript">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-12">
+              <img src="img/slogan.png" alt="">
               <p class="lead">
-                Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации дальнейших направлений развитая системы массового участия! Не следует, однако, забывать о том, что новая модель организационной деятельности играет важную роль в формировании направлений прогрессивного развития. Дорогие друзья, реализация намеченного плана развития позволяет оценить значение всесторонне сбалансированных нововведений.
+                ООО РП "Современник" основано в 1988 году. Производит изделия методом холодной листовой штамповки (обработка металла давлением) на оборудовании прессы однокривошипные (ГОСТ 9408-89), а так же проектирование, изготовление штампов (ГОСТ 22472-87) и технологической оснастки.
               </p>
             </div>
           </div>
@@ -70,14 +72,14 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-11 col-lg-9 col-md-offset-1 col-lg-offset-2">  
                   <!-- Отображение 3d-модели в браузере -->
-                  <iframe id='3dviewerplayer' type='text/html' width='100%' height='500' src='https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh' frameborder='0' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen><p>Your browser does not support iframes.</p>
+                  <iframe id='3dviewerplayer' type='text/html' width='100%' height='550' src='https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh' frameborder='0' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen><p>Your browser does not support iframes.</p>
                   </iframe>
                 </div>
               </div>
             </div>
 
             <div class="model-review col-xs-12 col-sm-5 col-md-4 col-lg-3 ">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-11">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
               <!-- Выпадающий список элементов -->
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 
@@ -146,6 +148,7 @@
                 </div>
               </div><!-- /.panel-group -->
               </div>
+              <div class="col-md-1 col-lg-1"></div>
             </div><!-- /.modal-review -->
           </div>
         </div>
