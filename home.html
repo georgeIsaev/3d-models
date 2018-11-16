@@ -70,7 +70,7 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-11 col-lg-9 col-md-offset-1 col-lg-offset-2">  
                   <!-- Отображение 3d-модели в браузере -->
-                  <iframe id='3dviewerplayer' type='text/html' width='100%' height='500' src='https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/2BRbYxao3rR68hw' frameborder='0' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen><p>Your browser does not support iframes.</p>
+                  <iframe id='3dviewerplayer' type='text/html' width='100%' height='500' src='https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh' frameborder='0' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen><p>Your browser does not support iframes.</p>
                   </iframe>
                 </div>
               </div>
@@ -92,22 +92,7 @@
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-                      <ul class="brackets">
-                        <li><a href="#">Кронштейн</a></li>
-                        <li><a href="#">Кронштейн 3</a></li>
-                        <li><a href="#">Кронштейн 4</a></li>
-                        <li><a href="#">Кронштейн 135°</a></li>
-                        <li><a href="#">Кронштейн Г-образный большой</a></li>
-                        <li><a href="#">Кронштейн Г-образный средний</a></li>
-                        <li><a href="#">Кронштейн Г-образный малый</a></li>
-                        <li><a href="#">Кронштейн треугольный большой левый</a></li>
-                        <li><a href="#">Кронштейн треугольный большой правый</a></li>
-                        <li><a href="#">Кронштейн треугольный малый левый</a></li>
-                        <li><a href="#">Кронштейн треугольный малый правый</a></li>
-                        <li><a href="#">Кронштейн средний левый</a></li>
-                        <li><a href="#">Кронштейн средний правый</a></li>
-                        <li><a href="#">Кронштейн петля</a></li>  
-                      </ul>
+                      <ul id="brackets"></ul>
                     </div>
                   </div>
                 </div>
@@ -123,12 +108,7 @@
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                      <ul class="rail">
-                        <li><a href="#"><a href="#">Рейка</a></li>
-                        <li><a href="#"><a href="#">Рейка большая</a></li>
-                        <li><a href="#"><a href="#">Рейка средняя</a></li>
-                        <li><a href="#"><a href="#">Рейка малая</a></li>
-                      </ul>
+                      <ul id="rails"></ul>
                     </div>
                   </div>
                 </div>
@@ -144,14 +124,7 @@
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
-                      <ul class="plats">
-                        <li><a href="#">Пластина резная 400</a></li>
-                        <li><a href="#">Пластина резная 460</a></li>
-                        <li><a href="#">Пластина уголок большая</a></li>
-                        <li><a href="#">Пластина уголок средняя</a></li>
-                        <li><a href="#">Пластина уголок малая</a></li>
-                        <li><a href="#">Т-образная пластина</a></li>
-                      </ul>
+                      <ul id="plats"></ul>
                     </div>
                   </div>
                 </div>
@@ -167,19 +140,7 @@
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                     <div class="panel-body">
-                      <ul class="corner">
-                        <li><a href="#">Сборка большая</a></li>
-                        <li><a href="#">Сборка средняя</a></li>
-                        <li><a href="#">Сборка малая</a></li>
-                        <li><a href="#">Уголок большой</a></li>
-                        <li><a href="#">Уголок средний</a></li>
-                        <li><a href="#">Уголок малый</a></li>
-                        <li><a href="#">Уголок оконный большой</a></li>
-                        <li><a href="#">Уголок оконный малый</a></li>
-                        <li><a href="#">Уголок оконный средний</a></li>
-                        <li><a href="#">Уголок с овальными отверстиями</a></li>
-                        <li><a href="#">Уголок трехмерный</a></li>  
-                      </ul>
+                      <ul id="corners"></ul>
                     </div>
                   </div>
                 </div>
@@ -205,8 +166,9 @@
     
     <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->  
+    <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
+    
+    <script src="js/home.js"></script> 
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/home.js"></script>
   </body>
 </html>
