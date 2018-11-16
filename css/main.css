@@ -5,17 +5,12 @@
 
 .descript {
 	margin-top: -20px;
-	padding: 50px 0;
+	padding: 30px 0;
 	text-align: center;
 }
 
-.descript p{
-	margin: 60px;
-	font-size: 25px;
-}
-
-.descript img{
-	margin-top: 60px;
+h1 {
+	margin-bottom: 30px;
 }
 
 .product-preview {
