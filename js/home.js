@@ -83,7 +83,6 @@ $(function() {
 			class: 'bracket',
 			modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/2ylmJ5dJHdBeMU6'
 		}
-
 	];
 
 	var railsData = [
@@ -110,14 +109,13 @@ $(function() {
 			class: 'rail',
 			modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh'
 		}
-
 	];
 
 	var platsData = [
 		{
 			text: 'Пластина резная 400',
 			class: 'plat',
-			modelSrc: ''
+			modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh'
 		},
 
 		{
@@ -149,14 +147,13 @@ $(function() {
 			class: 'plat',
 			modelSrc: ''
 		},
-
 	];
 
 	var cornersData = [
 		{
 			text: 'Сборка большая',
 			class: 'corner',
-			modelSrc: ''
+			modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh'
 		},
 
 		{
@@ -218,7 +215,6 @@ $(function() {
 			class: 'corner',
 			modelSrc: ''
 		},
-
 	];
 
 	// Функция создания елементов
@@ -288,56 +284,32 @@ $(function() {
 
 	//Выбор всех элементов списка Кронштейны, Рейка, Пластины, Уголок
 	var bracketsList = document.querySelectorAll('.bracket');
-var railsList = document.querySelectorAll('.rail');
+	var railsList = document.querySelectorAll('.rail');
 	var platsList = document.querySelectorAll('.plat');
 	var cornersList = document.querySelectorAll('.corner');
 
 	//Перехват клика на элемент из списка Кронштейны и изменение адресса элемента <iframe>
-	var addBracketsListClickHandler = function (bracketList, bracketData) {
-	  bracketList.addEventListener('click', function (evt) {
+	var ClickHandler = function (listName, listData) {
+	  listName.addEventListener('click', function (evt) {
 	  	evt.preventDefault();
-	    modelFrame.src = bracketData.modelSrc;
+	    modelFrame.src = listData.modelSrc;
 	  });
 	};
 
 	for (var i = 0; i < bracketsList.length; i++) {
-  	addBracketsListClickHandler(bracketsList[i], bracketsData[i]);
+  	ClickHandler(bracketsList[i], bracketsData[i]);
 	}
-
-//Перехват клика на элемент из списка Рейка и изменение адресса элемента <iframe>
-var addRailsListClickHandler = function (railList, railData) {
-  railList.addEventListener('click', function (evt) {
-  	evt.preventDefault();
-    modelFrame.src = railData.modelSrc;
-  });
-};
 
 	for (var i = 0; i < railsList.length; i++) {
-  	addBracketsListClickHandler(railsList[i], railsData[i]);
+  	ClickHandler(railsList[i], railsData[i]);
 	}
-
-	//Перехват клика на элемент из списка Пластины и изменение адресса элемента <iframe>
-	var addPlatsListClickHandler = function (platList, platData) {
-	  platList.addEventListener('click', function (evt) {
-	  	evt.preventDefault();
-	    modelFrame.src = platData.modelSrc;
-	  });
-	};
 
 	for (var i = 0; i < platsList.length; i++) {
-  	addBracketsListClickHandler(platsList[i], platsData[i]);
+  	ClickHandler(platsList[i], platsData[i]);
 	}
 
-	//Перехват клика на элемент из списка Уголок и изменение адресса элемента <iframe>
-	var addCornersListClickHandler = function (cornerList, cornerData) {
-	  cornerList.addEventListener('click', function (evt) {
-	  	evt.preventDefault();
-	    modelFrame.src = cornerData.modelSrc;
-	  });
-	};
-
 	for (var i = 0; i < cornersList.length; i++) {
-  	addBracketsListClickHandler(cornersList[i], cornersData[i]);
+  	ClickHandler(cornersList[i], cornersData[i]);
 	}
 
 });
