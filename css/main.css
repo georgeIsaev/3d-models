@@ -13,55 +13,8 @@
 	font-size: 20px;
 }
 
-/*Правила к описанию*/
-.descript {
-	margin-top: -20px;
-	padding: 30px 0;
-	text-align: center;
-}
-
-h1 {
-	margin: 50px 0;
-}
-
-/*Правило к основному контенту*/
-.product-preview {
-	padding: 50px 0;
-}
-
-iframe {
-	margin-bottom: 10px;
-}
-
-.display-none {
-	display: none;
-}
-
-.display-block {
-	display: block;
-}
-
-.model-review .btn-group-vertical,
-.model-review .dropdown-menu {
-	width: 100%;
-}
-
-#brackets,
-#rails,
-#plats,
-#corners {
-	list-style-type: none; 
-
-}
-
-.panel-collapse{
-	font-size: 16px;
-}
-
-.panel-title{
-	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
+#active{
+	color: #000;
 }
 
 /*Правила к подвалу*/
@@ -74,4 +27,3 @@ footer .copyright {
 	font-size: 17px;
 	text-align: center;
 }
-

@@ -1,0 +1,79 @@
+/*Правила к описанию*/
+.descript {
+	margin-top: -20px;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.descript {
+	margin-top: 50px;
+}
+
+h1 {
+	margin: 50px 0;
+}
+
+/*Правило к основному контенту*/
+.product-preview {
+	padding: 50px 0;
+}
+
+iframe {
+	margin-bottom: 10px;
+}
+
+.model-review .btn-group-vertical,
+.model-review .dropdown-menu {
+	width: 100%;
+}
+
+.panel-body {
+	padding: 0;
+	height: auto;
+}
+
+.panel-collapse {
+	font-size: 16px;
+}
+
+.panel-title {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.collapsed:focus {
+	text-decoration: none;
+}
+
+.list-group {
+	list-style-type: none;
+	margin: 0;
+}
+
+.list-group-item {
+	margin: 0;
+	padding: 0;
+	border-right: 0;
+	border-left: 0;
+	border-top: 0;
+	border-bottom: 1px solid gray;
+}
+
+.list-group-item:last-of-type {
+	border-bottom: 0;
+}
+
+.br_link {
+	display: block;
+	padding: 10px;
+	color: gray;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.br_link:hover,
+.br_link:focus {
+	color: black;
+	text-decoration: none;
+}
