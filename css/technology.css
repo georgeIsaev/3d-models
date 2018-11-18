@@ -1,0 +1,14 @@
+.tech-content {
+	padding: 70px 0px 0px;
+	text-align: center;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 50px 0;
+}
+
+.lead {
+	font-style: italic;
+}

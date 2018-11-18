@@ -1,21 +1,6 @@
-/*Правила к описанию*/
-.descript {
-	padding: 70px 0px 0px;
-	text-align: center;
+.services {
 	min-height: 100vh;
-}
-
-h1 {
-	margin: 50px 0;
-}
-
-/*Правило к основному контенту*/
-.product-preview {
-	padding: 50px 0;
-}
-
-iframe {
-	margin-bottom: 10px;
+	padding: 150px 0;
 }
 
 .model-review .btn-group-vertical,
@@ -34,16 +19,17 @@ iframe {
 
 .panel-title {
 	text-align: center;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: bold;
-	padding: 15px;
+	padding: 10px;
 }
 
 .panel-heading {
 	padding: 0;
 }
 
-.collapsed:focus {
+.collapsed:focus,
+.collapsed:hover{
 	text-decoration: none;
 }
 
@@ -77,4 +63,10 @@ iframe {
 .br_link:focus {
 	color: black;
 	text-decoration: none;
+}
+
+.lead {
+	text-align: center;
+	padding: 0;
+	margin: 0;
 }
