@@ -1,14 +1,10 @@
 .contacts {
 	min-height: 100vh;
-}
-
-.formOne,
-.formTwo {
-	margin-top: 250px;
-	padding: 50px;
+	padding-top: 200px;
 }
 
 .formTwo {
+	margin-top: 30px;
 	text-align: left;
 }
 
