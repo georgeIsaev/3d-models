@@ -1,35 +1,29 @@
-.descript {
-	margin-top: -20px;
-	padding: 50px 0;
-	background-color: #e8dfd1;
+.wrapper {
+	background-image: url('../img/bgr.png');
+	font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.product-preview {
-	padding: 50px 0;
-	background-color: #e9f0f2;
+/*Правила к навигационной строке*/
+.navbar-inverse {
+	border-radius: 0;
+	font-size: 17px;
 }
 
-.model-review .btn-group-vertical,
-.model-review .dropdown-menu {
-	width: 100%;
+.navbar-brand {
+	font-size: 20px;
 }
 
-iframe {
-	margin-bottom: 10px;
+#active{
+	color: #000;
 }
 
+/*Правила к подвалу*/
 footer {
-	padding: 80px 0;
+	padding-top: 70px;
+	padding-bottom:  100px;
 }
 
 footer .copyright {
 	font-size: 17px;
 	text-align: center;
-}
-
-.brackets,
-.rail,
-.plats,
-.corner {
-	list-style-type: none; 
 }
