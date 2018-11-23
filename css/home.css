@@ -65,7 +65,7 @@ iframe {
 	border-bottom: 0;
 }
 
-.br_link {
+.item-link {
 	display: block;
 	padding: 10px;
 	color: gray;
@@ -73,8 +73,8 @@ iframe {
 	font-weight: bold;
 }
 
-.br_link:hover,
-.br_link:focus {
+.item-link:hover,
+.item-link:focus {
 	color: black;
 	text-decoration: none;
 }

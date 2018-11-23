@@ -1,289 +1,111 @@
-var bracketsData = [
-	{
-		text: 'Кронштейн',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/zuPskqnmIhk3b8V'
-	},
 
-	{
-		text: 'Кронштейн 3',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/lIASCLKpFkbfSRZ'
-	},
+	var $accordion = $('#accordion');
+	var panelStr = ('<div class="panel panel-default"> </div>');
+	var panelHeadingStr = ('<div class="panel-heading" role="tab"> </div>');
+	var panelTitleStr = ('<h4 class="panel-title"> </h4>');
+	var collapsedStr = ('<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false"> </a>');
+	var panelCollapseStr = ('<div class="panel-collapse collapse" role="tabpanel""> </div>');
+	var panelBodyStr = ('<div class="panel-body"> </div>');
+	var listGroupStr = ('<ul class="list-group"> </ul>');
+	var listGroupItemStr = ('<li class="list-group-item"> </li>');
+	var listGroupItemLinkStr = ('<a class="item-link"> </a>');
 
-	{
-		text: 'Кронштейн 4',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/A5jM9CbEbkqanyv'
-	},
+	// Функция создания панели выпадающего списка под bootstrap 3
+	function createPanel(headingId, collapseId, headerName) {
+		$accordion.append(panelStr);
+		var $lastPanel = $accordion.find('.panel:last-child');
 
-	{
-		text: 'Кронштейн 135°',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/rX9o4Esy9FjYfJ4'
-	},
+		$lastPanel.append(panelHeadingStr);
+		$lastPanel.find('.panel-heading').append(panelTitleStr);
+		$lastPanel.find('.panel-heading').find('.panel-title').append(collapsedStr);
+		$lastPanel.find('.panel-heading').attr('id', headingId);
+		$lastPanel.find('.panel-heading').find('a.collapsed')
+			.html(headerName)
+			.attr({
+				"href": '#' + collapseId,
+				"aria-controls": collapseId
+			});
 
-	{
-		text: 'Кронштейн Г-образный большой',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/7u3zVsm9UeRE0qi'
-	},
+		$lastPanel.append(panelCollapseStr);
+		var $panelCollapse = $lastPanel.find('.panel-collapse');
+		$panelCollapse.append(panelBodyStr);
+		$panelCollapse.find('.panel-body').append(listGroupStr);
+		var $listGroup = $panelCollapse.find('.panel-body').find('.list-group');
 
-	{
-		text: 'Кронштейн Г-образный средний',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/5Dfmoqqur3vcqms'
-	},
+		$panelCollapse.attr({
+			"id": collapseId,
+			"aria-labelledby": headingId
+		});
+	};
 
-	{
-		text: 'Кронштейн Г-образный малый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/qH8RkWViGdVNkvH'
-	},
+	// Функция создания элемента выпадающего списка под bootstrap 3
+	function createListItems(collapseId, modelName, modelLink) {
+		$accordion.find('#' + collapseId).find('ul.list-group').append(listGroupItemStr);
+		$accordion.find('#' + collapseId).find('li:last-child').append(listGroupItemLinkStr);
+		$accordion.find('#' + collapseId).find('li:last-child').find('a.item-link')
+			.html(modelName).attr('href', modelLink);
+	};
 
-	{
-		text: 'Кронштейн треугольный большой левый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/45GLbESn9NhL4NJ'
-	},
-
-	{
-		text: 'Кронштейн треугольный большой правый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/TwjzfBCFNUolZxR'
-	},
-
-	{
-		text: 'Кронштейн треугольный малый левый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/rN4LjHCiNGLcfaB'
-	},
-
-	{
-		text: 'Кронштейн треугольный малый правый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/FuaIqT8eHh2Hd0k'
-	},
-
-	{
-		text: 'Кронштейн треугольный средний левый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/fbT0sjjwqP6RKsA'
-	},
-
-	{
-		text: 'Кронштейн треугольный средний правый',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/svpDjipATdFg9SV'
-	},
-
-	{
-		text: 'Кронштейн петля',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/2ylmJ5dJHdBeMU6'
-	}
-];
-
-var railsData = [
-	{
-		text: 'Рейка',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/HAAgOBPzNumJozH'
-	},
-
-	{
-		text: 'Рейка большая',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/POILtMf3Kw1xeJn'
-	},
-
-	{
-		text: 'Рейка средняя',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/2BRbYxao3rR68hw'
-	},
-
-	{
-		text: 'Рейка малая',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh'
-	}
-];
-
-var platsData = [
-	{
-		text: 'Пластина резная 400',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh'
-	},
-
-	{
-		text: 'Пластина резная 460',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Пластина уголок большая',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Пластина уголок средняя',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Пластина уголок малая',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Т-образная пластина',
-		modelSrc: ''
-	},
-];
-
-var cornersData = [
-	{
-		text: 'Сборка большая',
-		modelSrc: 'https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh'
-	},
-
-	{
-		text: 'Сборка средняя',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Сборка малая',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок большой',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок средний',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок малый',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок оконный большой',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок оконный малый',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок оконный средний',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок с овальными отверстиями',
-		modelSrc: ''
-	},
-
-	{
-		text: 'Уголок трехмерный',
-		modelSrc: ''
-	},
-];
+	// Функция смены источника у модели при нажатии на кнопку
+	function changeHrefOfIframe (element) {
+		$(element).click(function(event) {
+			event.preventDefault();
+			var href = $(element).attr("href");;
+			iframe.attr('src', href);
+		});
+	};
 
 
 
 $(function() {
-	
-	// Функция создания елементов
-	var makeElement = function (tagName, className, text) {
-	  var element = document.createElement(tagName);
-	  element.classList.add(className);
-	  if (text) {
-	    element.textContent = text;
-	  }
-	  return element;
-	};
 
-	// Функция создания елементов списка
-	var createPar = function(liName){
-		var paragraph = makeElement('li', 'list-group-item');
-		var link = makeElement('a', 'br_link',liName.text);
-		link.href = '#';
-		paragraph.appendChild(link);
-		return paragraph;
-	};
+	// Загрузка данных из файла в формате JSON
+	$.getJSON('data/data.json', function(data) {
+		var modelsData = [];
+		var panelHeaderNameData = [];
+		var panelItemsData = [];
 
+		// Цикл перебора данных полученных из файла
+		$(data).each( function(index, value) {
+			for( var id in data){
+				panelHeaderNameData.push(id);// Записываем в переменную panelHeaderNameData все имена заголовков
+				modelsData.push(data[id]); // Записываем в переменную modelsData массив из всех элементов (массив из массивов)
+			}
+		});
 
-	// Выбор елемента Кронштейны
-	var listElement = document.getElementById('brackets');
-	// Цикл создания элементов списка Кронштейн
-	for (var i = 0; i < bracketsData.length; i++) {
+		// Перебираем массив из всех элементов и записываем i-ый элемент массива
+		// в новую переменную, что бы затем перебрать его в другом цикле 
+		for (var i = 0; i < modelsData.length; i++){
+			// Записываем заголовки выпадающих списков, что бы затем передать в функцию
+			var arrayElement = modelsData[i];
+			var headingId = 'heading' + arrayElement[0].id_model_group;
+			var collapseId = 'collapse' + arrayElement[0].id_model_group;
+			
+			// Подставляем полученные данные в функцию и вызываем ее.
+			// Она создаст панель для выпадающего меню
+			createPanel(headingId, collapseId, panelHeaderNameData[i]);
 
-		var app = createPar(bracketsData[i]);
-		app.classList.add('bracket');
-		listElement.appendChild(app);
+			// Перебираем массив из объектов, зараннее записанный в переменную, на прошлом цикле
+			for (var j = 0; j < arrayElement.length; j++){
+				var arrajObject = arrayElement[j];
 
-	}
+				// Полученные данные подставляем в функцию и вызываем ее.
+				// она создаст элемент из выпадающего списка
+				createListItems(collapseId, arrajObject.name, arrajObject.link);
+			}
+		}
 
-	// Выбор елемента рейки
-	var listElement = document.getElementById('rails');
-	// Цикл создания элементов списка Рейки
-	for (var i = 0; i < railsData.length; i++) {
+		var allItemLink = $('.item-link');
+		var iframe = $('#3dviewerplayer');
 
-		var app = createPar(railsData[i]);
-		app.classList.add('rail');
-		listElement.appendChild(app);
+		for (var i = 0; i < allItemLink.length; i++) {
 
-	}
-
-	// Выбор елемента плиты
-	var listElement = document.getElementById('plats');
-	// Цикл создания элементов списка плиты
-	for (var i = 0; i < platsData.length; i++) {
-
-		var app = createPar(platsData[i]);
-		app.classList.add('plat');
-		listElement.appendChild(app);
-
-	}
-
-	// Выбор елемента уголок
-	var listElement = document.getElementById('corners');
-	// Цикл создания элементов списка Уголок
-	for (var i = 0; i < cornersData.length; i++) {
-
-		var app = createPar(cornersData[i]);
-		app.classList.add('corner');
-		listElement.appendChild(app);
-
-	}
+			$(allItemLink[i]).click(function(event) {
+				event.preventDefault();
+				var href = $(this).attr("href");
+				iframe.attr('src', href);
+			});
+		}
+	});	
 });
-	
-	
-$(function() {
-
-	var modelFrame = document.getElementById('3dviewerplayer');
-
-	//Выбор всех элементов списка Кронштейны, Рейка, Пластины, Уголок
-	var bracketsList = document.querySelectorAll('.bracket');
-	var railsList = document.querySelectorAll('.rail');
-	var platsList = document.querySelectorAll('.plat');
-	var cornersList = document.querySelectorAll('.corner');
-
-	//Перехват клика на элемент из списка Кронштейны и изменение адресса элемента <iframe>
-	var ClickHandler = function (listName, listData) {
-	  listName.addEventListener('click', function (evt) {
-	  	evt.preventDefault();
-	    modelFrame.src = listData.modelSrc;
-	  });
-	};
-
-	for (var i = 0; i < bracketsList.length; i++) {
-  	ClickHandler(bracketsList[i], bracketsData[i]);
-	}
-
-	for (var i = 0; i < railsList.length; i++) {
-  	ClickHandler(railsList[i], railsData[i]);
-	}
-
-	for (var i = 0; i < platsList.length; i++) {
-  	ClickHandler(platsList[i], platsData[i]);
-	}
-
-	for (var i = 0; i < cornersList.length; i++) {
-  	ClickHandler(cornersList[i], cornersData[i]);
-	}
-});
-	
 
