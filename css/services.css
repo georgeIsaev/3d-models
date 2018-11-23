@@ -3,66 +3,8 @@
 	padding: 150px 0;
 }
 
-.model-review .btn-group-vertical,
-.model-review .dropdown-menu {
-	width: 100%;
-}
-
-.panel-body {
-	padding: 0;
-	height: auto;
-}
-
-.panel-collapse {
-	font-size: 16px;
-}
-
-.panel-title {
-	text-align: center;
-	font-size: 17px;
-	font-weight: bold;
-	padding: 10px;
-}
-
-.panel-heading {
-	padding: 0;
-}
-
-.collapsed:focus,
-.collapsed:hover{
-	text-decoration: none;
-}
-
-.list-group {
-	list-style-type: none;
-	margin: 0;
-}
-
-.list-group-item {
-	margin: 0;
-	padding: 0;
-	border-right: 0;
-	border-left: 0;
-	border-top: 0;
-	border-bottom: 1px solid gray;
-}
-
-.list-group-item:last-of-type {
-	border-bottom: 0;
-}
-
-.br_link {
-	display: block;
-	padding: 10px;
-	color: gray;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.br_link:hover,
-.br_link:focus {
-	color: black;
-	text-decoration: none;
+.item-link:hover {
+	cursor: pointer;
 }
 
 .lead {

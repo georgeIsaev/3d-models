@@ -1,0 +1,70 @@
+{
+  "Группа 1": [
+    {
+      "id": "3",
+      "name": "1111",
+      "text": "1111",
+      "id_service_group": "1"
+    },
+    {
+      "id": "4",
+      "name": "2222",
+      "text": "2222",
+      "id_service_group": "1"
+    },
+    {
+      "id": "5",
+      "name": "3333",
+      "text": "3333",
+      "id_service_group": "1"
+    }
+  ],
+  "Группа 2": [
+    {
+      "id": "6",
+      "name": "1111",
+      "text": "1111",
+      "id_service_group": "2"
+    },
+    {
+      "id": "7",
+      "name": "2222",
+      "text": "222",
+      "id_service_group": "2"
+    }
+  ],
+  "Группа 3": [
+    {
+      "id": "8",
+      "name": "111",
+      "text": "111",
+      "id_service_group": "3"
+    },
+    {
+      "id": "9",
+      "name": "222",
+      "text": "222",
+      "id_service_group": "3"
+    },
+    {
+      "id": "10",
+      "name": "333",
+      "text": "333",
+      "id_service_group": "3"
+    }
+  ],
+  "Группа 4": [
+    {
+      "id": "11",
+      "name": "111",
+      "text": "111",
+      "id_service_group": "4"
+    },
+    {
+      "id": "12",
+      "name": "222",
+      "text": "222",
+      "id_service_group": "4"
+    }
+  ]
+}

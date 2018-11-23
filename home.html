@@ -9,8 +9,8 @@
 
     <!-- Bootstrap -->  
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main.css?vv773">
+    <link rel="stylesheet" href="css/home.css?v73">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->  
     <!-- Предупреждение: Respond.js не работает при просмотре страницы через файл:// -->  
@@ -76,8 +76,12 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-11 col-lg-9 col-md-offset-1 col-lg-offset-2">  
                   <!-- Отображение 3d-модели в браузере -->
-                  <iframe id='3dviewerplayer' type='text/html' width='100%' height='550' src='https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh' frameborder='0' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen><p>Your browser does not support iframes.</p>
+                  <iframe id='viewerplayer' type='text/html' width='100%' height='550' src='' frameborder='0' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen><p>Your browser does not support iframes.</p>
                   </iframe>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-11 col-lg-9 col-md-offset-1 col-lg-offset-2">  
+                  <!-- Описание выбранной детали -->
+                  <p id="modelDescription" class="select"> Выберите деталь </p>
                 </div>
               </div>
             </div>
@@ -109,7 +113,8 @@
     <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
-    <script src="js/home.js"></script> 
+    <script src="js/functionsForHomeServices.js?v3"></script>
+    <script src="js/home.js?v3"></script> 
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

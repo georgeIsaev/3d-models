@@ -1,12 +1,17 @@
 /*Правила к описанию*/
 .descript {
-	padding: 70px 0px 0px;
+	padding-top: 80px;
 	text-align: center;
 	min-height: 100vh;
 }
 
 h1 {
-	margin: 50px 0;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+p.lead {
+	margin: 0;
 }
 
 /*Правило к основному контенту*/
@@ -18,63 +23,12 @@ iframe {
 	margin-bottom: 10px;
 }
 
-.model-review .btn-group-vertical,
-.model-review .dropdown-menu {
-	width: 100%;
-}
-
-.panel-body {
-	padding: 0;
-	height: auto;
-}
-
-.panel-collapse {
-	font-size: 16px;
-}
-
-.panel-title {
+#modelDescription {
+	font-size: 35px;
 	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 15px;
+	margin: 20px 0;
 }
 
-.panel-heading {
-	padding: 0;
-}
-
-.collapsed:focus {
-	text-decoration: none;
-}
-
-.list-group {
-	list-style-type: none;
-	margin: 0;
-}
-
-.list-group-item {
-	margin: 0;
-	padding: 0;
-	border-right: 0;
-	border-left: 0;
-	border-top: 0;
-	border-bottom: 1px solid gray;
-}
-
-.list-group-item:last-of-type {
-	border-bottom: 0;
-}
-
-.item-link {
-	display: block;
-	padding: 10px;
-	color: gray;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.item-link:hover,
-.item-link:focus {
-	color: black;
-	text-decoration: none;
+#viewerplayer {
+	display: none;
 }
