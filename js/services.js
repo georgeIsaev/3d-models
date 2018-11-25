@@ -44,7 +44,7 @@ $(function() {
 			$(allItemLink[i]).click(function(event) {
 				event.preventDefault();
 				var text = $(this).attr("description");
-				description.text(text);
+				description.text(text).css('font-size', '18px');
 			});
 		}
 	});	

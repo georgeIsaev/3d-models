@@ -9,8 +9,8 @@
 
     <!-- Bootstrap -->  
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css?vv773">
-    <link rel="stylesheet" href="css/home.css?v73">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->  
     <!-- Предупреждение: Respond.js не работает при просмотре страницы через файл:// -->  
@@ -45,7 +45,7 @@
                 <li class="menu-titles"><a href="technology.html">Технологии</a></li>
                 <li class="menu-titles"><a href="services.html">Услуги</a></li>
                 <li class="menu-titles"><a href="contacts.html">Контакты</a></li>
-                <li class="menu-titles"><a href="calculator.html">Калькулятор</a></li>
+                <li class="menu-titles"><a role="button" id="open-modal" data-toggle="modal" data-target="#myModal">Калькулятор</a></li>
               </ul> 
             </div><!-- /.navbar-collapse -->
             <!-- /Панель навигации -->
@@ -53,7 +53,7 @@
           </div><!-- /.container -->
         </div><!-- /.container-fluid -->
       </nav>
-      
+
       <!-- Краткое описание проекта --> 
       <section class="descript">
         <div class="container">
@@ -108,13 +108,96 @@
         </div>
       </footer>
 
+      <!-- Модальное окно -->  
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Обратная связь</h4>
+            </div>
+            <form action="" class="form" id="myForm">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                  <div class="modal-body">
+                      <!-- 0 -->
+                    <div class="form-group">
+                      <label for="contactPerson">Контактное лицо</label>
+                      <input type="text" class="form-control" id="contactPerson"
+                      name="contactPerson">
+                    </div>
+                      <!-- 1 -->
+                    <div class="form-group">
+                      <label for="phone">Телефон</label>
+                      <input type="text" class="form-control" id="phone" name="phone">
+                    </div>
+                      <!-- 2 -->
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                      <!-- 3 -->
+                    <div class="form-group">
+                      <label for="productName">Наименование изделия</label>
+                      <input type="text" class="form-control" id="productName" name="productName">
+                    </div>
+                      <!-- 4 -->
+                    <div class="form-group">
+                      <label for="quantity">Потребность в месяц</label>
+                      <input type="number" class="form-control" id="quantity" name="quantity">
+                    </div>
+                      <!-- 5 -->
+                    <div class="form-group">
+                      <label for="material">Материал</label>
+                      <input type="text" class="form-control" id="material" name="material">
+                    </div>
+                      <!-- 6 -->
+                    <div class="form-group">
+                      <label for="price">Желаемая цена</label>
+                      <div class="input-group">
+                        <div class="input-group-addon">₽</div>
+                        <input type="number" class="form-control" id="price" name="price">
+                        <div class="input-group-addon">.00</div>
+                      </div>  
+                    </div>
+                      <!-- 7 -->
+                    <div class="form-group">
+                      <label for="deliveryTime">Желаемый срок поставки первой партии</label>
+                      <input type="text" class="form-control" id="deliveryTime" name="deliveryTime">
+                    </div>
+                      <!-- 8 -->
+                    <div class="form-group">
+                      <label for="inputFile">Прикрепить файл с чертежом (эскизом или фото)</label>
+                      <input type="file" id="inputFile">
+                    </div>
+                      <!-- 9 -->
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5" placeholder="Дополнительно"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <button type="submit" class="btn btn-primary">Заказать расчет на новое изделие</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /.wrapper -->
     
     <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
-    <script src="js/functionsForHomeServices.js?v3"></script>
-    <script src="js/home.js?v3"></script> 
+    <script src="js/functionsForHomeServices.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/calculatorValidate.js"></script> 
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
