@@ -33,3 +33,12 @@ iframe {
 	display: none;
 }
 
+#openModal {
+	margin: 60px 0 20px;
+}
+
+.btn-default {
+	background-color: #555;
+	color: #fff;
+	font-weight: bold;
+}
