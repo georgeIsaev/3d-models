@@ -13,3 +13,24 @@
 	padding: 0;
 	margin: 0;
 }
+
+@media (max-width: 768px) {
+	.services {
+		min-height: 100vh;
+	}
+
+	.lead {
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.services {
+		min-height: 100vh;
+		padding: 100px 0;
+	}
+
+	.lead {
+		margin-top: 20px;
+	}
+}

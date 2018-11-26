@@ -30,3 +30,20 @@ label {
 .firmCont {
 	padding-left: 5px;
 }
+
+@media (max-width: 768px) {
+	.contacts {
+		min-height: 100%;
+		padding-top: 30px;
+		padding-bottom: 50px;
+		vertical-align: middle;
+	}
+},
+
+@media (max-width: 1024px) {
+	.contacts {
+		min-height: 100vh;
+		padding-top: 100px;
+		vertical-align: middle;
+	}
+}

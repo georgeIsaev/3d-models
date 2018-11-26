@@ -37,8 +37,34 @@ iframe {
 	margin: 60px 0 20px;
 }
 
+
 .btn-default {
 	background-color: #555;
 	color: #fff;
 	font-weight: bold;
 }
+
+@media (max-width: 768px) {
+	#openModal {
+		margin: 30px 0px 0px;
+	}
+
+	.descript {
+		padding-top: 40px;
+		text-align: center;
+		min-height: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	#openModal {
+		margin: 30px 0px 50px;
+	}
+
+	.descript {
+		padding-top: 40px;
+		text-align: center;
+		min-height: 100%;
+	}
+}
+
