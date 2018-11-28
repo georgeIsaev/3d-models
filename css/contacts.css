@@ -12,11 +12,6 @@
 	text-align: left;
 }
 
-.btn-default,
-.btn-default:hover {
-	padding: 10px 50px;
-}
-
 .form-control {
 	border-top: 0;
 	border-right: 0;
