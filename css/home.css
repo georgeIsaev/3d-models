@@ -14,7 +14,7 @@ p.lead {
 	margin: 0;
 }
 
-/*Правила к основному контенту*/
+/*Правило к основному контенту*/
 .product-preview {
 	padding: 50px 0;
 }
@@ -33,34 +33,12 @@ iframe {
 	display: none;
 }
 
-@media (max-width: 768px) {
-
-	.descript {
-		padding-top: 40px;
-		text-align: center;
-		min-height: 100%;
-	}
+#openModal {
+	margin: 60px 0 20px;
 }
 
-@media (max-width: 1024px) {
-
-	.descript {
-		padding-top: 40px;
-		text-align: center;
-		min-height: 100%;
-	}
-}
-
-
-/*Правила к формам на главной странице*/
-.contacts {
-	padding: 50px 0 20px;
-	text-align: center;
-}
-
-.formContacts {
-	padding: 20px;
-}
-
-.home-form {
+.btn-default {
+	background-color: #555;
+	color: #fff;
+	font-weight: bold;
 }
