@@ -1,0 +1,52 @@
+{
+  "Кронштейны": [
+    {
+      "id": "9",
+      "name": "Кронштейн 3",
+      "text": "Инфофывфыв",
+      "link": "https://www.3dvieweronline.com/members/Id7052dac9f266e7843faf319350765a98/I9gjfu3RhqvK0Lz",
+      "id_model_group": "33"
+    },
+    {
+      "id": "9",
+      "name": "Кронштейн 135",
+      "text": "Инфофывфыв",
+      "link": "https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/rX9o4Esy9FjYfJ4",
+      "id_model_group": "33"
+    }
+  ],
+  "Направляющая рейка": [
+    {
+      "id": "11",
+      "name": "Рейка",
+      "text": "ывафывафыа",
+      "link": "https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/HAAgOBPzNumJozH",
+      "id_model_group": "34"
+    },
+    {
+      "id": "11",
+      "name": "Рейка малая",
+      "text": "ывафывафыа",
+      "link": "https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh",
+      "id_model_group": "34"
+    }
+  ],
+  "Пластины": [
+    {
+      "id": "12",
+      "name": "Пластина",
+      "text": "фывфывфвыфыв",
+      "link": "https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh",
+      "id_model_group": "35"
+    }
+  ],
+  "Уголок крепежный": [
+    {
+      "id": "13",
+      "name": "Уголок крепежный",
+      "text": "ывфывфаыкпу",
+      "link": "https://www.3dvieweronline.com/members/Id64329af3e5dc362feda36f2bb623a515/F3EaqMYJgvXUaPh",
+      "id_model_group": "36"
+    }
+  ]
+}

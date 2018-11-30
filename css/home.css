@@ -1,15 +1,20 @@
 /*Правила к описанию*/
 .descript {
-	padding: 70px 0px 0px;
+	padding-top: 80px;
 	text-align: center;
 	min-height: 100vh;
 }
 
 h1 {
-	margin: 50px 0;
+	margin-top: 80px;
+	margin-bottom: 50px;
 }
 
-/*Правило к основному контенту*/
+p.lead {
+	margin: 0;
+}
+
+/*Правила к основному контенту*/
 .product-preview {
 	padding: 50px 0;
 }
@@ -18,63 +23,45 @@ iframe {
 	margin-bottom: 10px;
 }
 
-.model-review .btn-group-vertical,
-.model-review .dropdown-menu {
-	width: 100%;
-}
-
-.panel-body {
-	padding: 0;
-	height: auto;
-}
-
-.panel-collapse {
-	font-size: 16px;
-}
-
-.panel-title {
+#modelDescription {
+	font-size: 35px;
 	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 15px;
+	margin: 20px 0;
 }
 
-.panel-heading {
-	padding: 0;
+#viewerplayer {
+	display: none;
 }
 
-.collapsed:focus {
-	text-decoration: none;
+@media (max-width: 768px) {
+
+	.descript {
+		padding-top: 40px;
+		text-align: center;
+		min-height: 100%;
+	}
 }
 
-.list-group {
-	list-style-type: none;
-	margin: 0;
+@media (max-width: 1024px) {
+
+	.descript {
+		padding-top: 40px;
+		text-align: center;
+		min-height: 100%;
+	}
 }
 
-.list-group-item {
-	margin: 0;
-	padding: 0;
-	border-right: 0;
-	border-left: 0;
-	border-top: 0;
-	border-bottom: 1px solid gray;
+
+/*Правила к формам на главной странице*/
+.contacts {
+	padding: 50px 0 20px;
+	text-align: center;
 }
 
-.list-group-item:last-of-type {
-	border-bottom: 0;
+.formContacts {
+	padding: 20px;
 }
 
-.br_link {
-	display: block;
-	padding: 10px;
-	color: gray;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.br_link:hover,
-.br_link:focus {
-	color: black;
-	text-decoration: none;
+.formContacts .btn-primary {
+	margin-top: 20px;
 }

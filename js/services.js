@@ -1,83 +1,51 @@
-var servicesOneData = [
-	{
-		serviceName: 'Услуга', 
-	},
-	{
-		serviceName: 'Услуга', 
-	},
-	{
-		serviceName: 'Услуга', 
-	},
-	{
-		serviceName: 'Услуга', 
-	},
-	{
-		serviceName: 'Услуга', 
-	},
-	{
-		serviceName: 'Услуга', 
-	},
-];
-var servicesTwoData = [];
-var servicesThreeData = [];
-var servicesFourData = [];
-var servicesFiveData = [];
-
-
 $(function() {
 	
-	// Функция создания елементов
-	var makeElement = function (tagName, className, text) {
-	  var element = document.createElement(tagName);
-	  element.classList.add(className);
-	  if (text) {
-	    element.textContent = text;
-	  }
-	  return element;
-	};
+	// Загрузка данных из файла в формате JSON
+	$.getJSON('data/service.json', function(data) {
+		var modelsData = [];
+		var panelHeaderNameData = [];
+		var panelItemsData = [];
 
-	// Функция создания елементов списка
-	var createPar = function(liName){
-		var paragraph = makeElement('li', 'list-group-item');
-		var link = makeElement('a', 'br_link',liName.serviceName);
-		link.href = '#';
-		paragraph.appendChild(link);
-		return paragraph;
-	};
+		// Цикл перебора данных полученных из файла
+		$(data).each( function(index, value) {
+			for( var id in data){
+				panelHeaderNameData.push(id);// Записываем в переменную panelHeaderNameData все имена заголовков
+				modelsData.push(data[id]); // Записываем в переменную modelsData массив из всех элементов (массив из массивов)
+			}
+		});
 
+		// Перебираем массив из всех элементов и записываем i-ый элемент массива
+		// в новую переменную, что бы затем перебрать его в другом цикле 
+		for (var i = 0; i < modelsData.length; i++){
+			// Записываем заголовки выпадающих списков, что бы затем передать в функцию
+			var arrayElement = modelsData[i];
+			var headingId = 'heading' + arrayElement[0].id_service_group;
+			var collapseId = 'collapse' + arrayElement[0].id_service_group;
+			
+			// Подставляем полученные данные в функцию и вызываем ее.
+			// Она создаст панель для выпадающего меню
+			createPanel(headingId, collapseId, panelHeaderNameData[i]);
 
-	// Выбор елемента Услуги 1
-	var listElement = document.getElementById('servicesOne');
-	// Цикл создания элементов списка Кронштейн
-	for (var i = 0; i < servicesOneData.length; i++) {
+			// Перебираем массив из объектов, зараннее записанный в переменную, на прошлом цикле
+			for (var j = 0; j < arrayElement.length; j++){
+				var arrajObject = arrayElement[j];
 
-		var app = createPar(servicesOneData[i]);
-		app.classList.add('serviceOne');
-		listElement.appendChild(app);
+				// Полученные данные подставляем в функцию и вызываем ее.
+				// она создаст элемент из выпадающего списка
+				createListItems(collapseId, arrajObject.name, null, arrajObject.text);
+			}
+		}
 
-	}
-});
-	
-	
-$(function() {
+		var allItemLink = $('.item-link');
+		var description = $('#description');
 
-	var modelFrame = document.getElementById('3dviewerplayer');
+		for (var i = 0; i < allItemLink.length; i++) {
 
-	//Выбор всех элементов списка Услуги
-	var bracketsList = document.querySelectorAll('.bracket');
-	var railsList = document.querySelectorAll('.rail');
-	var platsList = document.querySelectorAll('.plat');
-	var cornersList = document.querySelectorAll('.corner');
-
-	//Перехват клика на элемент из списка Услуги1 и изменение адресса элемента <iframe>
-	var ClickHandler = function (listName, listData) {
-	  listName.addEventListener('click', function (evt) {
-	  	evt.preventDefault();
-	    modelFrame.src = listData.modelSrc;
-	  });
-	};
-
-	for (var i = 0; i < bracketsList.length; i++) {
-  	ClickHandler(bracketsList[i], bracketsData[i]);
-	}
+			$(allItemLink[i]).click(function(event) {
+				event.preventDefault();
+				var text = $(this).attr("description");
+				description.text(text).css('font-size', '18px');
+			});
+		}
+	});	
 });

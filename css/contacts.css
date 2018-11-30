@@ -1,24 +1,56 @@
 .contacts {
 	min-height: 100vh;
+	padding-top: 100px;
+	vertical-align: middle;
 }
 
-.formOne,
-.formTwo {
-	margin-top: 250px;
-	padding: 50px;
+.formOne {
+	margin-bottom: 130px;
+}
+
+.formOne .btn-primary{
+	margin-top: 10px;
 }
 
 .formTwo {
 	text-align: left;
 }
 
-.btn-default,
-.btn-default:hover {
-	padding: 10px 50px;
-}
-
 .form-control {
 	border-top: 0;
 	border-right: 0;
 	border-left: 0;
+}
+
+label {
+	vertical-align: middle;
+}
+
+.firmCont {
+	padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+	.contacts {
+		min-height: 100%;
+		padding-top: 30px;
+		padding-bottom: 50px;
+		vertical-align: middle;
+	}
+
+	.formOne {
+		text-align: center;
+	}
+
+	.formOne .btn-primary{
+		margin-top: 20px;
+	}
+},
+
+@media (max-width: 1024px) {
+	.contacts {
+		min-height: 100vh;
+		padding-top: 100px;
+		vertical-align: middle;
+	}
 }
