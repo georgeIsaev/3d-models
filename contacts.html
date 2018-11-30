@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Выше 3 Мета-теги ** должны прийти в первую очередь в голове; любой другой руководитель контент *после* эти теги -->  
     <title>Bootstrap 101 Template</title>
-
+    
     <!-- Bootstrap -->  
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -41,10 +41,10 @@
             <!-- Панель навигации -->  
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li class="menu-titles"><a href="home.html">Главная</a></li>
-                <li class="menu-titles"><a href="technology.html">Технологии</a></li>
-                <li class="menu-titles"><a href="services.html">Услуги</a></li>
-                <li class="menu-titles active"><a href="#">Контакты</a></li>
+                <li class="menu-titles" id="home"><a href="home.html">Главная</a></li>
+                <li class="menu-titles" id="technology"><a href="technology.html">Технологии</a></li>
+                <li class="menu-titles" id="services"><a href="services.html">Услуги</a></li>
+                <li class="menu-titles" id="contacts"><a href="#">Контакты</a></li>
               </ul> 
             </div><!-- /.navbar-collapse -->
             <!-- /Панель навигации -->
@@ -65,7 +65,7 @@
                 <div class="form-group">
                   <textarea class="form-control" rows="5" placeholder="Сообщение"></textarea>
                 </div>
-                <button type="submit" class="btn btn-default">Отправить</button>
+                <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
               </form>
             </div>
 
@@ -113,25 +113,7 @@
     <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
     <script src="js/jquery.validate.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(function() {
-
-        $('#formOne').validate({
-          rules: {
-            email: {
-              required: true,
-              minlength: 10
-            }
-          },
-
-          messages: {
-            email: {
-              required: "Поле 'email' обязательно к заполнению",
-              email: "Необходим формат адреса email" 
-            }
-          }
-        });
-      });
-    </script>
+    <script src="js/index.js"></script>
+    <script src="js/contactsValidate.js"></script>
   </body>
 </html>
