@@ -11,6 +11,12 @@
 
 .navbar-brand {
 	font-size: 20px;
+	padding: 0;
+}
+
+.navbar-brand img{
+	width: 60%;
+	margin-top: 10%;
 }
 
 #active{
