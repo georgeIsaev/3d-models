@@ -29,10 +29,6 @@ iframe {
 	margin: 20px 0;
 }
 
-#viewerplayer {
-	display: none;
-}
-
 @media (max-width: 768px) {
 
 	.descript {

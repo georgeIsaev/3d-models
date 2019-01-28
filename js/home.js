@@ -42,6 +42,8 @@ $(function() {
 
 		for (var i = 0; i < allItemLink.length; i++) {
 
+			iframe.attr('src', allItemLink[0].href)
+
 			$(allItemLink[i]).click(function(event) {
 				event.preventDefault();
 				var href = $(this).attr("href");
