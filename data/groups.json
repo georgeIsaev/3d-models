@@ -1,0 +1,31 @@
+[
+	{
+		"id":"34",
+		"name_group":"Направляющая рейка",
+		"img":"img/1.jpg"
+	},
+
+	{
+		"id":"35",
+		"name_group":"Пластины",
+		"img":"img/2.jpg"
+	},
+
+	{
+		"id":"36",
+		"name_group":"Уголок крепежный",
+		"img":"img/3.jpg"
+	},
+
+	{
+		"id":"37",
+		"name_group":"Кронштейны",
+		"img":"img/4.jpg"
+	},
+
+	{
+		"id":"67",
+		"name_group":"Тест3",
+		"img":"img/5.jpg"
+	}
+]

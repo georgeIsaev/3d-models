@@ -48,4 +48,22 @@ function createListItems(collapseId, modelName, modelLink, modelDescription) {
 		});
 };
 
+var $catalog = $('#catalog');
+var column = ('<div class="column col-xs-12 col-sm-4 col-md-4 col-lg-4"> </div>');
+var product = ('<div class="prod-column"> <img src="" alt="" class="prod-img"> <h2 class="title"> </h2> </div>');
 
+// Функция создания ряда под продукты
+function createCatalog(productId, nameGroup, imgSrc) {
+	$catalog.append(column);
+	
+	var $lastColumn = $catalog.find('.column:last-child');
+
+	$lastColumn.append(product).attr('id', productId);
+
+	var $title = $('#' + productId).find('.title:last-child');
+	var $img = $('#' + productId).find('.prod-img:last-child');
+	
+	$title.html(nameGroup);
+	$img.attr('src', imgSrc);
+
+};
